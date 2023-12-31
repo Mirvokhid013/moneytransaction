@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transaction</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">Money Transactions</h1>
+                <div class="hero__inner">
+                    <ul class="hero__list column">
+                        <li class="column__item"><button class="main-page">Main</button></li>
+                        <li class="column__item"><button class="history-page">History</button></li>
+                        <li class="column__item"><button class="income-page">Incomes</button></li>
+                        <li class="column__item"><button class="expense-page">Expenses</button></li>
+                        <button class="logout" type="button">Log Out</button>
+                    </ul>
+                    <ul class="hero__body">
+                        <li id="main" class="column__body main">
+                            <ul class="total__list">
+                                <li class="total__item total-income">Total Incomes</li>
+                                <li class="total__item total-expense">Total Expenses</li>
+                                <li class="total__item total-balance">Total Balance</li>
+                            </ul>
+                            <h3 class="recent__title">Last Transactions</h3>
+                            <ul class="recent__list">
+                                <li class="recent__items">
+                                    <h4 class="recent__subtitle"></h4>
+                                    <p class="recent__amount"></p>
+                                    <p class="recent__category"></p>
+                                    <p class="recent__description"></p>
+                                    <p class="recent__date"></p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="history" class="column__body history visually-hidden">
+                            <ul class="history__list"></ul>
+                        </li>
+                        <li id="incomes" class="column__body incomes visually-hidden">
+                            <form class="form__income">
+                                <input class="income__title" type="text" placeholder="Title">
+                                <input class="income__amount" type="number" placeholder="Amount">
+                                <select style="width: 98%;" class="income__category">
+                                    <option hidden>Category</option>
+                                    <option value="business">business</option>
+                                    <option value="apartment">apartment</option>
+                                    <option value="salary">salary</option>
+                                    <option value="taxi">taxi</option>
+                                    <option value="games">games</option>
+                                    <option value="charity">charity</option>
+                                </select>
+                                <input class="income__description" type="text" placeholder="Description">
+                                <input class="income__date" type="date">
+                                <button type="submit">Send</button>
+                            </form>
+                            <div class="all-incomes">
+                                <ul class="all-income__list"></ul>
+                            </div>
+                        </li>
+                        <li id="expenses" class="column__body expenses visually-hidden">
+                            <form class="form__expense">
+                                <input class="expense__title" type="text" placeholder="Title">
+                                <input class="expense__amount" type="number" placeholder="Amount">
+                                <select style="width: 98%;" class="expense__category">
+                                    <option hidden>Category</option>
+                                    <option value="food">food</option>
+                                    <option value="apartment">apartment</option>
+                                    <option value="taxes">taxes</option>
+                                    <option value="taxi">taxi</option>
+                                    <option value="games">games</option>
+                                    <option value="charity">charity</option>
+                                </select>
+                                <input class="expense__description" type="text" placeholder="Description">
+                                <input class="expense__date" type="date">
+                                <button type="submit">Send</button>
+                            </form>
+                            <div class="all-expense">
+                                <ul class="all-expense__list"></ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+</html>
